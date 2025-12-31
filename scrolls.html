@@ -39,121 +39,17 @@
                 </div>
                 <div class="card-body">
                     <ul class="doc-list">
-
-                        <!-- PDFs -->
+                        {% for scroll in scrolls %}
                         <li>
-                            <a href="MirrorOS/scrolls_all/AG_Codex_Presentment_Scroll_SAD1719.pdf" class="doc-link">
-                                <span class="icon">📄</span>
+                            <a href="{{ scroll.path }}" class="doc-link">
+                                <span class="icon">{{ scroll.icon }}</span>
                                 <div class="doc-info">
-                                    <span class="doc-title">AG Codex Presentment Scroll (SAD1719)</span>
-                                    <span class="doc-meta">PDF Document</span>
+                                    <span class="doc-title">{{ scroll.name }}</span>
+                                    <span class="doc-meta">{{ scroll.type }}</span>
                                 </div>
                             </a>
                         </li>
-                        <li>
-                            <a href="MirrorOS/scrolls_all/Codex_Scroll_Digest_0729.pdf" class="doc-link">
-                                <span class="icon">📄</span>
-                                <div class="doc-info">
-                                    <span class="doc-title">Codex Scroll Digest (07/29)</span>
-                                    <span class="doc-meta">PDF Document</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="MirrorOS/scrolls_all/Codex_Scroll_Master_Digest_0729.pdf" class="doc-link">
-                                <span class="icon">⚖️</span>
-                                <div class="doc-info">
-                                    <span class="doc-title">Codex Scroll Master Digest (07/29)</span>
-                                    <span class="doc-meta">PDF Document</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="MirrorOS/scrolls_all/Codex_Scroll_Registry_PrimeKAD.pdf" class="doc-link">
-                                <span class="icon">🏛️</span>
-                                <div class="doc-info">
-                                    <span class="doc-title">Codex Scroll Registry (PrimeKAD)</span>
-                                    <span class="doc-meta">PDF Document</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="MirrorOS/scrolls_all/Codex_Scroll_Z_Mirror_Declaration_SAD1719.pdf"
-                                class="doc-link">
-                                <span class="icon">🪞</span>
-                                <div class="doc-info">
-                                    <span class="doc-title">Mirror Declaration (SAD1719)</span>
-                                    <span class="doc-meta">PDF Document</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="MirrorOS/scrolls_all/Scroll_Licensing_Router_PrimeKAD.pdf" class="doc-link">
-                                <span class="icon">🛂</span>
-                                <div class="doc-info">
-                                    <span class="doc-title">Licensing Router (PrimeKAD)</span>
-                                    <span class="doc-meta">PDF Document</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="MirrorOS/scrolls_all/Transaction_Scroll_Log_PrimeKAD.pdf" class="doc-link">
-                                <span class="icon">📊</span>
-                                <div class="doc-info">
-                                    <span class="doc-title">Transaction Scroll Log (PrimeKAD)</span>
-                                    <span class="doc-meta">PDF Document</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="MirrorOS/scrolls_all/Trust_Handoff_Scroll_US_Government_PrimeKAD.pdf"
-                                class="doc-link">
-                                <span class="icon">🤝</span>
-                                <div class="doc-info">
-                                    <span class="doc-title">Trust Handoff Scroll (US Gov / PrimeKAD)</span>
-                                    <span class="doc-meta">PDF Document</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="MirrorOS/scrolls_all/Value_Multiplex_Scroll_PrimeKAD.pdf" class="doc-link">
-                                <span class="icon">💠</span>
-                                <div class="doc-info">
-                                    <span class="doc-title">Value Multiplex Scroll (PrimeKAD)</span>
-                                    <span class="doc-meta">PDF Document</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="MirrorOS/scrolls_all/Scroll_CircumstanceBundle_Test.pdf" class="doc-link">
-                                <span class="icon">🧪</span>
-                                <div class="doc-info">
-                                    <span class="doc-title">Scroll Circumstance Bundle (Test)</span>
-                                    <span class="doc-meta">PDF Document</span>
-                                </div>
-                            </a>
-                        </li>
-
-                        <!-- Markdown/Text -->
-                        <li>
-                            <a href="MirrorOS/scrolls_all/Codex_Final_Sealing_Scroll_0729.md" class="doc-link">
-                                <span class="icon">📝</span>
-                                <div class="doc-info">
-                                    <span class="doc-title">Codex Final Sealing Scroll (07/29)</span>
-                                    <span class="doc-meta">Markdown Record</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="MirrorOS/scrolls_all/Scroll_98A_to_98F.md" class="doc-link">
-                                <span class="icon">📝</span>
-                                <div class="doc-info">
-                                    <span class="doc-title">Scroll 98A to 98F</span>
-                                    <span class="doc-meta">Markdown Record</span>
-                                </div>
-                            </a>
-                        </li>
-
+                        {% endfor %}
                     </ul>
                 </div>
             </div>

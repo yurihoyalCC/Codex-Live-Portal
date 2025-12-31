@@ -38,7 +38,7 @@
         </div>
         <div class="status-item">
           <span class="label">Last Seal</span>
-          <span class="value">Cycle 1767206059</span>
+          <span class="value">{{ last_seal }}</span>
         </div>
       </section>
 
@@ -86,6 +86,43 @@
           </div>
         </div>
 
+        <!-- Omni-Archive Explorer -->
+        <div class="card explorer-card">
+          <div class="card-header">
+            <h3>📂 Omni-Archive Explorer</h3>
+          </div>
+          <div class="card-body">
+            <p>Browse the entire Codex directory structure.</p>
+            <div class="link-group" style="display: grid; gap: 10px;">
+              <a href="/browse/" class="doc-link" style="justify-content:space-between;">
+                <span style="display:flex; align-items:center; gap:10px;"><span class="icon">🌌</span> Root
+                  Directory</span>
+                <span class="arrow">→</span>
+              </a>
+              <a href="/browse/CodexTrust" class="doc-link" style="justify-content:space-between;">
+                <span style="display:flex; align-items:center; gap:10px;"><span class="icon">🛡️</span> Codex
+                  Trust</span>
+                <span class="arrow">→</span>
+              </a>
+              <a href="/browse/MirrorOS" class="doc-link" style="justify-content:space-between;">
+                <span style="display:flex; align-items:center; gap:10px;"><span class="icon">🪞</span> MirrorOS
+                  System</span>
+                <span class="arrow">→</span>
+              </a>
+              <a href="/browse/Archives" class="doc-link" style="justify-content:space-between;">
+                <span style="display:flex; align-items:center; gap:10px;"><span class="icon">📦</span> Zip
+                  Archives</span>
+                <span class="arrow">→</span>
+              </a>
+              <a href="/browse/SEALS" class="doc-link" style="justify-content:space-between;">
+                <span style="display:flex; align-items:center; gap:10px;"><span class="icon">🔒</span> Cryptographic
+                  Seals</span>
+                <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
         <!-- Trust Section -->
         <div class="card trust-card">
           <div class="card-header">
@@ -113,42 +150,17 @@
           </div>
           <div class="card-body">
             <ul class="doc-list">
+              {% for doc in core_docs %}
               <li>
-                <a href="Codex_Scroll_Z_Mirror_Declaration_SAD1719.pdf" class="doc-link">
-                  <span class="icon">📄</span>
+                <a href="{{ doc.filename }}" class="doc-link">
+                  <span class="icon">{{ doc.icon }}</span>
                   <div class="doc-info">
-                    <span class="doc-title">Mirror Declaration (SAD1719)</span>
+                    <span class="doc-title">{{ doc.title }}</span>
                     <span class="doc-meta">PDF Document</span>
                   </div>
                 </a>
               </li>
-              <li>
-                <a href="Execution_Enforcement_Package.pdf" class="doc-link">
-                  <span class="icon">⚖️</span>
-                  <div class="doc-info">
-                    <span class="doc-title">Execution Enforcement Package</span>
-                    <span class="doc-meta">PDF Document</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="Settlement_Declaration_ScottAlanDygert.pdf" class="doc-link">
-                  <span class="icon">🖋️</span>
-                  <div class="doc-info">
-                    <span class="doc-title">Settlement Declaration</span>
-                    <span class="doc-meta">PDF Document</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="UCC1_Financing_Statement_ScottAlanDygert.pdf" class="doc-link">
-                  <span class="icon">🏦</span>
-                  <div class="doc-info">
-                    <span class="doc-title">UCC1 Financing Statement</span>
-                    <span class="doc-meta">PDF Document</span>
-                  </div>
-                </a>
-              </li>
+              {% endfor %}
               <li>
                 <a href="scrolls.html" class="doc-link"
                   style="border-color: var(--accent-color); background: rgba(56, 189, 248, 0.05);">
