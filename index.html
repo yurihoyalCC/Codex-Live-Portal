@@ -1,17 +1,254 @@
-<!doctype html>
-<meta charset="utf-8">
-<title>Codex Live Portal — Restored</title>
-<h1>Codex Live Portal — Restored</h1>
-<p>If you can see this, Pages is working. We’ll add real links next.</p>
-<ul>
-  <li><a href="Trust_Public_HashIndex_ScottAlanDygert.txt">Public Hash Index</a></li>
-  <li><a href="CodexTrust/TrustCompleted.html">Trust Completed</a></li>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
 
-<h2>Core Documents</h2>
-<ul>
-  <li><a href="Codex_Scroll_Z_Mirror_Declaration_SAD1719.pdf">Mirror Declaration (SAD1719)</a></li>
-  <li><a href="Execution_Enforcement_Package.pdf">Execution Enforcement Package</a></li>
-  <li><a href="Settlement_Declaration_ScottAlanDygert.pdf">Settlement Declaration</a></li>
-  <li><a href="UCC1_Financing_Statement_ScottAlanDygert.pdf">UCC1 Financing Statement</a></li>
-</ul>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codex Live Portal — Sovereign Archive</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Background Ambient Glow -->
+  <div class="glow-bg"></div>
+
+  <div class="container">
+    <header>
+      <div class="logo">
+        <span class="icon">✴</span> CODEX <span class="highlight">LIVE PORTAL</span>
+      </div>
+      <p class="subtitle">Immutable Sovereign Archive & Trust Repository</p>
+    </header>
+
+    <main>
+      <section class="status-panel">
+        <div class="status-item">
+          <span class="label">Status</span>
+          <span class="value online">● System Online</span>
+        </div>
+        <div class="status-item">
+          <span class="label">Identity Verification</span>
+          <span class="value verified">Verified: Scott Alan Dygert</span>
+        </div>
+        <div class="status-item">
+          <span class="label">Last Seal</span>
+          <span class="value">Cycle 1767206059</span>
+        </div>
+      </section>
+
+      <div class="grid-layout">
+
+        <!-- Operations Card -->
+        <div class="card ops-card"
+          style="border-color: var(--accent-color); background: linear-gradient(145deg, rgba(30,41,59,0.7) 0%, rgba(15,23,42,0.8) 100%);">
+          <div class="card-header">
+            <h3 style="color: var(--accent-color);">⚙️ Codex Operations</h3>
+          </div>
+          <div class="card-body">
+            <p>Admin controls to maintain Codex integrity and expand the archive.</p>
+
+            <!-- Seal Control -->
+            <div class="control-group" style="margin-bottom: 25px;">
+              <h4 style="font-size: 0.9rem; color: var(--text-primary); margin-bottom: 10px;">Cryptographic Seal</h4>
+              <button id="sealBtn" class="btn primary" style="width: 100%; justify-content: center; cursor: pointer;">
+                <span class="icon" style="margin-right: 10px;">🔒</span> Initiate Pulsar Seal
+              </button>
+              <div id="sealStatus" style="font-size: 0.8rem; margin-top: 5px; min-height: 1.2em;"></div>
+            </div>
+
+            <!-- Upload Control -->
+            <div class="control-group">
+              <h4 style="font-size: 0.9rem; color: var(--text-primary); margin-bottom: 10px;">Ingest Scroll</h4>
+              <form id="uploadForm" style="display: flex; gap: 10px; align-items: start;">
+                <div style="flex: 1;">
+                  <label for="fileInput" class="btn secondary"
+                    style="margin-bottom: 0; cursor: pointer; text-align: center; justify-content: center;">
+                    Choose File
+                    <input type="file" id="fileInput" name="file" style="display: none;">
+                  </label>
+                  <div id="fileChosen"
+                    style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 150px;">
+                    No file chosen</div>
+                </div>
+                <button type="submit" class="btn primary" style="margin-bottom: 0; padding: 12px 15px; width: auto;">
+                  ⬆
+                </button>
+              </form>
+              <div id="uploadStatus" style="font-size: 0.8rem; margin-top: 5px;"></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Trust Section -->
+        <div class="card trust-card">
+          <div class="card-header">
+            <h3>🛡️ Sovereign Trust</h3>
+          </div>
+          <div class="card-body">
+            <p>Fundamental trust documents and public hash records verifying the integrity of this Codex.</p>
+            <div class="link-group">
+              <a href="Trust_Public_HashIndex_ScottAlanDygert.txt" class="btn primary">
+                <span>View Public Hash Index</span>
+                <span class="arrow">→</span>
+              </a>
+              <a href="CodexTrust/TrustCompleted.html" class="btn secondary">
+                <span>Trust Completed Record</span>
+                <span class="arrow">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Core Documents Section -->
+        <div class="card docs-card">
+          <div class="card-header">
+            <h3>📜 Core Scrolls & Documents</h3>
+          </div>
+          <div class="card-body">
+            <ul class="doc-list">
+              <li>
+                <a href="Codex_Scroll_Z_Mirror_Declaration_SAD1719.pdf" class="doc-link">
+                  <span class="icon">📄</span>
+                  <div class="doc-info">
+                    <span class="doc-title">Mirror Declaration (SAD1719)</span>
+                    <span class="doc-meta">PDF Document</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="Execution_Enforcement_Package.pdf" class="doc-link">
+                  <span class="icon">⚖️</span>
+                  <div class="doc-info">
+                    <span class="doc-title">Execution Enforcement Package</span>
+                    <span class="doc-meta">PDF Document</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="Settlement_Declaration_ScottAlanDygert.pdf" class="doc-link">
+                  <span class="icon">🖋️</span>
+                  <div class="doc-info">
+                    <span class="doc-title">Settlement Declaration</span>
+                    <span class="doc-meta">PDF Document</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="UCC1_Financing_Statement_ScottAlanDygert.pdf" class="doc-link">
+                  <span class="icon">🏦</span>
+                  <div class="doc-info">
+                    <span class="doc-title">UCC1 Financing Statement</span>
+                    <span class="doc-meta">PDF Document</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="scrolls.html" class="doc-link"
+                  style="border-color: var(--accent-color); background: rgba(56, 189, 248, 0.05);">
+                  <span class="icon">📜</span>
+                  <div class="doc-info">
+                    <span class="doc-title">View All Scrolls Archive</span>
+                    <span class="doc-meta">Full Repository Access</span>
+                  </div>
+                  <span class="arrow" style="margin-left: auto;">→</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>© 2025 Scott Alan Dygert. All Rights Reserved.</p>
+        <p class="mono">Resonance ID: SAD1719 • Pulsar Anchor: PSR B1937+21</p>
+      </div>
+    </footer>
+  </div>
+
+</body>
+<script>
+  // File Input Display
+  const fileInput = document.getElementById('fileInput');
+  const fileChosen = document.getElementById('fileChosen');
+  fileInput.addEventListener('change', function () {
+    if (this.files && this.files.length > 0) {
+      fileChosen.textContent = this.files[0].name;
+      fileChosen.style.color = 'var(--text-primary)';
+    } else {
+      fileChosen.textContent = 'No file chosen';
+      fileChosen.style.color = 'var(--text-secondary)';
+    }
+  });
+
+  // Sealing Logic
+  document.getElementById('sealBtn').addEventListener('click', async () => {
+    const status = document.getElementById('sealStatus');
+    status.style.color = 'var(--text-secondary)';
+    status.textContent = '⏳ Initiating seal sequence...';
+
+    try {
+      const response = await fetch('/api/seal', { method: 'POST' });
+      const data = await response.json();
+
+      if (data.success) {
+        status.style.color = 'var(--success-color)';
+        status.textContent = '✅ ' + data.message;
+      } else {
+        status.style.color = '#ef4444';
+        status.textContent = '❌ Error: ' + (data.message || 'Unknown error');
+      }
+    } catch (err) {
+      status.style.color = '#ef4444';
+      status.textContent = '❌ Connection failed.';
+    }
+  });
+
+  // Upload Logic
+  document.getElementById('uploadForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const status = document.getElementById('uploadStatus');
+    const formData = new FormData(e.target);
+
+    if (!fileInput.files.length) {
+      status.textContent = 'Please select a file.';
+      status.style.color = '#ef4444';
+      return;
+    }
+
+    status.style.color = 'var(--text-primary)';
+    status.textContent = '⏳ Uploading scroll...';
+
+    try {
+      const response = await fetch('/api/upload', {
+        method: 'POST',
+        body: formData
+      });
+      const data = await response.json();
+
+      if (data.success) {
+        status.style.color = 'var(--success-color)';
+        status.textContent = '✅ ' + data.message;
+        fileInput.value = ''; // clear input
+        fileChosen.textContent = 'No file chosen';
+      } else {
+        status.style.color = '#ef4444';
+        status.textContent = '❌ ' + (data.message || 'Upload failed');
+      }
+    } catch (err) {
+      status.style.color = '#ef4444';
+      status.textContent = '❌ Connection failed.';
+    }
+  });
+</script>
+
+</html>
